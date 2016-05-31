@@ -1,4 +1,35 @@
+#################
+## MS SQL
+#################
+
+# SQL Server files
+App_Data/*.mdf
+App_Data/*.ldf
+
+#######################
+## Windows detritus
+#######################
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac crap
+.DS_Store
+
+
+#############
+## R
+#############
+
 # History files
+.Rproj.user
 .Rhistory
 .Rapp.history
 
@@ -17,3 +48,5 @@ vignettes/*.pdf
 
 # OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
 .httr-oauth
+
+
