@@ -23,7 +23,7 @@ rep.rows <- function(data, freq, l.dt = TRUE) {
     f <- data[[f]]
   }
 
-  if (l.dt) {
+  if (is.data.table(data)) {
     data[rep(seq(nrow(data)), f), vars, with=FALSE]
   } else {
     data[rep(seq(nrow(data)), f), vars]
@@ -38,4 +38,4 @@ system.time(x <- rep.rows(d.f, "freq"))
 system.time(x <- rep.rows(d.t, "freq"))
 
 # And now when data.table is not available/being used
-system.time(x <- rep.rows(d.f, "freq", l.dt=F))
+system.time(x <- rep.rows(d.t, "freq", l.dt=F))
