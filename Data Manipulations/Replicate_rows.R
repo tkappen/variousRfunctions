@@ -23,7 +23,7 @@ rep.rows <- function(data, freq, l.dt = TRUE) {
     f <- data[[f]]
   }
 
-  if(anyNA(f)) stop('freq variable contains NAs')
+  if(anyNA(f)) stop('\'freq\' contains NAs')
   
   if (is.data.table(data)) {
     data[rep(seq(nrow(data)), f), vars, with=FALSE]
